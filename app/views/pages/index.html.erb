@@ -1,0 +1,14 @@
+
+<%= image_tag("shopping.jpg", :width => 1853, :height => 600) %>
+<div class="start">
+ <div class="button"> 
+  <div class="one">
+   <%= link_to "start shopping", stores_path, class:"btn btn-danger"%>
+   <% if current_user.admin? %>
+    <%= link_to "create a store", new_store_path, class: "btn btn-primary"%>
+    <%= link_to "create a category", new_category_path, class: "btn btn-primary"%>
+    <%= link_to "create a items", new_category_path, class: "btn btn-primary"%>
+   <% end %>
+  </div>
+ </div>
+</div>

@@ -1,0 +1,12 @@
+    
+  <div class="categories-container">
+    <div class="category-card">
+      <h2><%= @store.name %></h2>
+      <div class="items-list">
+        <ul>
+        <% @users.each do |user| %>
+          <li><%= user.name %>
+        <%end%>
+        </ul>
+      </div>
+    </div>

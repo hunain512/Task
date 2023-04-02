@@ -1,0 +1,20 @@
+
+ <% @cart.cart_items.each do |cart_item| %>
+  <div class="categories-container">
+    <div class="category-card">
+    <p><%=cart_item.item.name %></p>
+    <p><%= cart_item.item.price %></p>
+    <p><%= cart_item.quantity %></p>
+      <div class="items-list">
+        <ul>
+       
+  <%= link_to '+', cart_item_add_path(:id =>cart_item),method: :post, class:"btn btn-danger btn-sm" %>
+  <%= link_to "-", cart_item_reduce_path(:id => cart_item), method: :post, class:"btn btn-danger btn-sm" %>
+  <div id="margin"> 
+  <%= link_to "REMOVE Item", cart_item_path(cart_item), method: :delete , class:"btn btn-danger btn-sm"%>
+  </div>      
+  </ul>
+      </div>
+    </div>
+  <%end%>
+

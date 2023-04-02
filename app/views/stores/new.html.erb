@@ -1,0 +1,10 @@
+
+<h1 class="text-secondary text-light bg-dark" > Create the Store </h1>
+
+<% @store.errors.full_messages.each do |message|%>
+  <%= message %>
+<% end %>
+
+ <%= render 'form' %>
+ <%= link_to 'returnback', stores_path, class:"btn btn-danger" %>
+ <%= link_to 'create a category', new_category_path, class:"btn btn-dark" %>

@@ -1,0 +1,17 @@
+<h1> this is the category index page in this </h1>
+
+<% @categories.each do |category| %>
+  <div class="row">
+  <div class="">
+    <div class="card">
+      <div class="card-body ">
+        <h5 class="card-title"><%= category.name%></h5>
+        <p class="card-text"> <%= link_to "view category", category_path(category), class: "btn btn-small btn-dark" %></p>
+        <% if current_user.admin? %>
+         <p class="card-text"> <%= link_to "delete category", category_path(category), method: :delete, class: "btn btn-small btn-danger" %></p>
+         <p class="card-text"> <%= link_to "edit category", edit_category_path(category),  class: "btn btn-small btn-dark" %></p>
+        <% end %>  
+        </div>
+    </div>
+  </div>
+<% end %>  

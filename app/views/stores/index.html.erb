@@ -1,0 +1,14 @@
+
+<% @stores.each do |store| %>
+<div class="categories-container">
+  <div class="category-card">
+    <h2><%= store.name %></h2>
+    <div class="items-list">
+      <ul>
+      <% store.categories.each do |category| %>
+        <li><%= link_to category.name, category_path(category), class: "badge rounded-pill badge-dark" %> </li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+<%end%>

@@ -1,0 +1,9 @@
+ <% @items.each do |item| %>
+    <div class="categories-containers">
+    <div class="category-cardd">
+    <div class="container">
+    <h1><%= item.name%></h1>
+    <h1>$<%=item.price%></h1>
+    </div>
+  </div>
+<% end %>

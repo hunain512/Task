@@ -1,0 +1,13 @@
+<h2><%= @category.name %></h2>
+
+<% @items.each do |item| %>
+  <div class="categories-containers">
+  <div class="category-cardd">
+  <div class="container">
+  <h1><%= item.name%></h1>
+  <h1>$<%=item.price%></h1>
+  Qty : <%= text_field_tag 'quantity', '1', :size => 2, :maxlength => 2 %>
+   <p><%= link_to "Addtocart", cart_items_path(:item_id => item.id),method: :post %> </p> 
+  </div>
+    </div>
+<% end %>
